@@ -8,7 +8,7 @@ import {logout} from '../slices/authSlice';
 import logo from '../assets/logo.png';
 import React from 'react';
 
-const header = () => {
+const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const { userInfo } = useSelector((state) => state.auth);
 
