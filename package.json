@@ -10,7 +10,9 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node backend/seeder.js",
-    "data:destroy": "node backend/seeder.js -d"
+    "data:destroy": "node backend/seeder.js -d",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Josh Hart",
   "license": "MIT",
@@ -26,6 +28,7 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
+    "gh-pages": "^6.1.1",
     "nodemon": "^3.1.4"
   }
 }
